@@ -25,7 +25,9 @@
           url: '/playlists',
           views: {
             'menuContent': {
-              templateUrl: 'templates/playlists.html'
+              templateUrl: 'templates/playlists.html',
+              controller: 'MenuController',
+              controllerAs: 'vm'
           }
         }
       });
