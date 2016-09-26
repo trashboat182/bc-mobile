@@ -28,10 +28,20 @@
               templateUrl: 'templates/playlists.html',
               controller: 'MenuController',
               controllerAs: 'vm'
+            }
           }
-        }
-      });
-      $urlRouterProvider.otherwise('/app/playlists')
+        })
+        .state('app.start', {
+          url: '/start',
+          views: {
+            'menuContent': {
+              templateUrl: 'app/components/start/startView.html',
+              controller: 'StartController',
+              controllerAs: 'vm'
+            }
+          }
+        });
+      $urlRouterProvider.otherwise('/app/start')
 
 
     });

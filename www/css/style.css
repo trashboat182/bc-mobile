@@ -1,1 +1,20 @@
 /* Empty. Add your own CSS if you like */
+.start_log {
+  background-color: #e5e5e5;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+.logo_init {
+  max-width: 100%;
+  margin: 25%;
+}
+.start-buttons {
+  position: relative;
+  bottom: 0;
+}
+.slide-center {
+  text-align: center;
+  margin: 10%;
+}

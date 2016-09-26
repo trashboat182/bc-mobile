@@ -28,6 +28,10 @@
         // org.apache.cordova.statusbar required
 //        StatusBar.styleDefault();
       }
+
+      setTimeout(function(){
+        document.getElementById("start_log").style.display = "none";
+      }, 3000);
     });
   }
 
