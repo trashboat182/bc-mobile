@@ -40,6 +40,26 @@
               controllerAs: 'vm'
             }
           }
+        })
+        .state('app.login', {
+          url: '/login',
+          views: {
+            'menuContent': {
+              templateUrl: 'app/components/login/loginView.html',
+              controller: 'LoginController',
+              controllerAs: 'vm'
+            }
+          }
+        })
+        .state('app.indexAdds', {
+          url:'/indexAdds',
+          views: {
+            'menuContent': {
+              templateUrl: 'app/components/indexAdds/indexAddsView.html',
+              controller: 'IndexAddsController',
+              controllerAs: 'vm'
+            }
+          }
         });
       $urlRouterProvider.otherwise('/app/start')
 
