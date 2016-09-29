@@ -6,7 +6,7 @@
 
   angular
     .module('bcMobile', [
-      'ionic', 'app.routes','ngAnimate', 'restangular'
+      'ionic', 'app.routes','ngAnimate', 'restangular', 'firebase'
     ])
     .config(function(RestangularProvider, appConfig) {
       //set the base url for api calls on our RESTful services

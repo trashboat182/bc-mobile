@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "restangular": "^1.5.2",
-    "lodash": "^4.15.0"
+    "lodash": "^4.15.0",
+    "angularfire": "^2.0.2"
   }
 }
