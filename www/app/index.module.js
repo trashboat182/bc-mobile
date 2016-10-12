@@ -19,6 +19,18 @@
         newBaseUrl = deployedAt + "/riot-core-services/api/";
         //newBaseUrl = 'http://retailtasks.riotplatform.com:8080' + "/riot-core-services/api/";
       }
+
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDpBcnqW8lds5EJtrGjUiI4G2RYIEprKKo",
+        authDomain: "mekan-4e5c4.firebaseapp.com",
+        databaseURL: "https://mekan-4e5c4.firebaseio.com",
+        storageBucket: "mekan-4e5c4.appspot.com",
+        messagingSenderId: "895644856207"
+      };
+      firebase.initializeApp(config);
+
+      //  Initialize Restangular
       RestangularProvider.setBaseUrl(newBaseUrl);
       RestangularProvider.setDefaultHeaders({token:appConfig.token, 'Content-Type':'application/json', 'Access-Control-Allow-Origin':'*'});
 
