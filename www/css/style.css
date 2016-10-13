@@ -18,3 +18,7 @@
   text-align: center;
   margin: 10%;
 }
+.message-error {
+  margin-top: 15px;
+  text-align: center;
+}

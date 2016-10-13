@@ -28,6 +28,10 @@
      $state.go("app.login");
     };
 
+    vm.register = function () {
+      $state.go("app.register");
+    };
+
     function slideNext(mil) {
       var deferred = $q.defer();
       setTimeout(function () {

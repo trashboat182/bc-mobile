@@ -22,11 +22,11 @@
 
       // Initialize Firebase
       var config = {
-        apiKey: "AIzaSyDpBcnqW8lds5EJtrGjUiI4G2RYIEprKKo",
-        authDomain: "mekan-4e5c4.firebaseapp.com",
-        databaseURL: "https://mekan-4e5c4.firebaseio.com",
-        storageBucket: "mekan-4e5c4.appspot.com",
-        messagingSenderId: "895644856207"
+        apiKey: "AIzaSyDJdkqm9ZldGQDpDGkkoDIagqNeru4n7OE",
+        authDomain: "ionictest-471dc.firebaseapp.com",
+        databaseURL: "https://ionictest-471dc.firebaseio.com",
+        storageBucket: "ionictest-471dc.appspot.com",
+        messagingSenderId: "1093976214106"
       };
       firebase.initializeApp(config);
 

@@ -60,6 +60,16 @@
               controllerAs: 'vm'
             }
           }
+        })
+        .state('app.register', {
+          url:'/register',
+          views: {
+            'menuContent': {
+              templateUrl: 'app/components/registration/registerView.html',
+              controller: 'RegisterController',
+              controllerAs: 'vm'
+            }
+          }
         });
       $urlRouterProvider.otherwise('/app/start')
 
