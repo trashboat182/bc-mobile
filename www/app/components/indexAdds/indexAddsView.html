@@ -1,12 +1,28 @@
+
 <ion-view>
   <ion-nav-title>
-    ANUNCIOS
+    <div class="bar bar-header">
+      <button class="button button-icon icon ion-navicon" ng-click="vm.view.buttons.menuButton()"></button>
+      <p class="title">Anuncios Qualia</p>
+      <button class="button button-icon icon ion-search"></button>
+    </div>
   </ion-nav-title>
-  <ion-nav-bar class="bar-stable">
-    <ion-nav-back-button>
-    </ion-nav-back-button>
-  </ion-nav-bar>
+  <ion-nav-bar></ion-nav-bar>
   <ion-content>
-    We still working...
+    <ion-list  ng-repeat="category in vm.view.categories">
+      <ion-item ng-click="vm.view.buttons.openCategory($index)">
+        <i ng-class="category.icon"></i>
+        <span class="category-name">{{category.name}}</span>
+        <i class="arrow-icon icon" ng-class="{'ion-ios-arrow-right': !category.status, 'ion-ios-arrow-down': category.status}"></i>
+      </ion-item>
+      <ion-item ng-if="category.status">
+        <div class="row" ng-repeat="optionRow in category.options">
+          <div class="button col col-50 category-options" ng-repeat="optionCol in optionRow" ng-click="">
+            <i class="icon icon-options" ng-class="optionCol.icon"></i><br>
+            {{optionCol.name}}
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

@@ -22,3 +22,16 @@
   margin-top: 15px;
   text-align: center;
 }
+.arrow-icon {
+  float: right;
+}
+.category-name {
+  margin-left: 10%;
+}
+.category-options {
+  background-color: #acbfff;
+  margin: 3px 10px;
+}
+.icon-options {
+  color: #1d730a;
+}
