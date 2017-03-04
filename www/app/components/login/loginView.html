@@ -10,16 +10,19 @@
       <div class="list">
         <label class="item item-input">
           <span class="input-label">Username</span>
-          <input type="text" ng-model="vm.user.username">
+          <input type="text" ng-model="vm.user.username" ng-change="vm.user.errorMessage = '';">
         </label>
         <label class="item item-input">
           <span class="input-label">Password</span>
-          <input type="password" ng-model="vm.user.password">
+          <input type="password" ng-model="vm.user.password" ng-change="vm.user.errorMessage = '';">
         </label>
         <label class="item">
           <button class="button button-block button-positive" type="submit">Log in</button>
         </label>
       </div>
     </form>
+    <div class="message-error" ng-if="vm.user.errorMessage">
+      <h4 class="assertive">{{vm.user.errorMessage}}</h4>
+    </div>
   </ion-content>
 </ion-view>

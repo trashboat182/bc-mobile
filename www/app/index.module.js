@@ -22,11 +22,11 @@
 
       // Initialize Firebase
       var config = {
-        apiKey: "AIzaSyDJdkqm9ZldGQDpDGkkoDIagqNeru4n7OE",
-        authDomain: "ionictest-471dc.firebaseapp.com",
-        databaseURL: "https://ionictest-471dc.firebaseio.com",
-        storageBucket: "ionictest-471dc.appspot.com",
-        messagingSenderId: "1093976214106"
+        apiKey: "AIzaSyAFn3v-YDIHS5k3w9tMVyC-Bu4EBAFZJ_U",
+        authDomain: "qualia-379e2.firebaseapp.com",
+        databaseURL: "https://qualia-379e2.firebaseio.com",
+        storageBucket: "qualia-379e2.appspot.com",
+        messagingSenderId: "596372653299"
       };
       firebase.initializeApp(config);
 

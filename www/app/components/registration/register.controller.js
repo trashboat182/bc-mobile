@@ -8,7 +8,7 @@
     .module('bcMobile')
     .controller('RegisterController', RegisterController);
 
-  function RegisterController($state) {
+  function RegisterController($state, $ionicPopup) {
     var vm = this;
 
     vm.createUser = {
@@ -23,25 +23,48 @@
     };
 
     function init() {
+      /*var database = firebase.database();
+      //firebase.auth();
+      console.log("patomalo awadawd", database);
+      console.log("patomalo eeeeeee", firebase.auth());*/
       console.log("Welcome to the registration");
     }
 
     vm.saveUser = function() {
       if(!vm.createUser.username || !vm.createUser.email || !vm.createUser.password || !vm.createUser.confirmPassword) {
-        vm.view.messageField = 'Llena todo los campos requeridos !';
+        //vm.view.messageField = 'Llena todo los campos requeridos !';
+        vm.view.errorMessage = 'Llena todo los campos requeridos !';
         return;
       }
       if(vm.createUser.password != vm.createUser.confirmPassword) {
-        vm.view.messagePassword = 'password confirmation is different !';
+        //vm.view.messagePassword = 'Password confirmation is different !';
+        vm.view.errorMessage = 'Password confirmation is different !';
+        return;
+      }
+      if(vm.createUser.email && vm.createUser.password) {
+        firebase.auth().createUserWithEmailAndPassword(vm.createUser.email, vm.createUser.password).then( function (response) {
+          console.log("good",response);
+          $ionicPopup.alert({
+            title: 'User created'
+          }).then(function (response) {
+            $state.go("app.login");
+            console.log("done", response);
+          });
+        }).catch( function (response) {
+          console.log("bad", response);
+          vm.view.errorMessage = response.message;
+        });
       }
     };
 
     vm.closeMessage = function() {
       if(vm.createUser.username && vm.createUser.email && vm.createUser.password && vm.createUser.confirmPassword) {
-        vm.view.messageField = '';
+        //vm.view.messageField = '';
+        vm.view.errorMessage = '';
       }
       if(vm.createUser.password == vm.createUser.confirmPassword) {
-        vm.view.messagePassword = '';
+        //vm.view.messagePassword = '';
+        vm.view.errorMessage = '';
       }
     };
 
