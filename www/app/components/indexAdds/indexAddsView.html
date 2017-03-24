@@ -9,6 +9,9 @@
   </ion-nav-title>
   <ion-nav-bar></ion-nav-bar>
   <ion-content>
+    <button class="button button-block button-positive" ng-click="">
+      Crear mi anuncio
+    </button>
     <ion-list  ng-repeat="category in vm.view.categories">
       <ion-item ng-click="vm.view.buttons.openCategory($index)">
         <i ng-class="category.icon"></i>

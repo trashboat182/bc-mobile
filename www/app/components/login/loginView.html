@@ -9,12 +9,10 @@
     <form ng-submit="vm.doLogin()">
       <div class="list">
         <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="vm.user.username" ng-change="vm.user.errorMessage = '';">
+          <input type="text" ng-model="vm.user.username" ng-change="vm.user.errorMessage = '';"  placeholder="Username">
         </label>
         <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="vm.user.password" ng-change="vm.user.errorMessage = '';">
+          <input type="password" ng-model="vm.user.password" ng-change="vm.user.errorMessage = '';" placeholder="Password">
         </label>
         <label class="item">
           <button class="button button-block button-positive" type="submit">Log in</button>

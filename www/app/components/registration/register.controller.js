@@ -43,12 +43,21 @@
       }
       if(vm.createUser.email && vm.createUser.password) {
         firebase.auth().createUserWithEmailAndPassword(vm.createUser.email, vm.createUser.password).then( function (response) {
-          console.log("good",response);
-          $ionicPopup.alert({
-            title: 'User created'
-          }).then(function (response) {
-            $state.go("app.login");
-            console.log("done", response);
+          console.log("good Auth",response);
+          var userKey = response.uid;
+          var userSubmit = {
+            userName: vm.createUser.username,
+            email: vm.createUser.email,
+            password: vm.createUser.password
+          };
+          firebase.database().ref('users/' + userKey).set(userSubmit).then( function () {
+            console.log("good user Saved");
+            $ionicPopup.alert({
+              title: 'User created'
+            }).then(function (response) {
+              $state.go("app.login");
+              console.log("done", response);
+            });
           });
         }).catch( function (response) {
           console.log("bad", response);
