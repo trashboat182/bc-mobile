@@ -7,14 +7,15 @@
   angular
     .module('bcMobile')
     .controller('IndexAddsController', IndexAddsController);
-  function IndexAddsController($firebaseAuth, $firebaseObject, $ionicSideMenuDelegate) {
+  function IndexAddsController($state, $ionicSideMenuDelegate) {
     var vm = this;
     var ref = firebase.database().ref();
 
     vm.view = {
       buttons:  {
         menuButton: menuButton,
-        openCategory: openCategory
+        openCategory: openCategory,
+        createAdd: createAdd
       },
       categories: [{
         name:'Inmuebles',
@@ -58,7 +59,6 @@
     }
 
     function menuButton() {
-      console.log("cosas de la vida");
       $ionicSideMenuDelegate.toggleLeft();
     }
 
@@ -71,6 +71,11 @@
           cat.status = false;
         }
       }
+    }
+
+    function createAdd() {
+      console.log('go to crate');
+      $state.go("app.createAdd");
     }
 
     /**

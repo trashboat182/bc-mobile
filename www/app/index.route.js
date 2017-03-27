@@ -70,6 +70,16 @@
               controllerAs: 'vm'
             }
           }
+        })
+        .state('app.createAdd', {
+          url:'/create',
+          views: {
+            'menuContent': {
+              templateUrl: 'app/components/createAdd/createAddView.html',
+              controller: 'CreateAddController',
+              controllerAs: 'vm'
+            }
+          }
         });
       $urlRouterProvider.otherwise('/app/start')
 
