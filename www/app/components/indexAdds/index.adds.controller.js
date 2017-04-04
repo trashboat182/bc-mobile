@@ -15,7 +15,8 @@
       buttons:  {
         menuButton: menuButton,
         openCategory: openCategory,
-        createAdd: createAdd
+        createAdd: createAdd,
+        goToAddsDetail: goToAddsDetail
       },
       categories: [{
         name:'Inmuebles',
@@ -76,6 +77,10 @@
     function createAdd() {
       console.log('go to crate');
       $state.go("app.createAdd");
+    }
+
+    function goToAddsDetail() {
+      $state.go("app.detailAdd");
     }
 
     /**

@@ -44,7 +44,7 @@
     function slideMove() {
       slideNext(4000).then(function (resolve) {
         console.log(resolve);
-        if(resolve != 9){slideMove();}
+        if(resolve != 100){slideMove();}
         else {return;}
       });
     }

@@ -8,7 +8,7 @@
     .module('bcMobile')
     .controller('CreateAddController', CreateAddController);
 
-  function CreateAddController($ionicSideMenuDelegate) {
+  function CreateAddController($ionicSideMenuDelegate, $state, $ionicPopup) {
     var vm = this;
     vm.buttons = {
       menuButton: menuButton,
@@ -21,6 +21,11 @@
     vm.categoryList = [];
 
     function init() {
+      vm.view = {
+        category: null,
+        subCategory: null
+      };
+      vm.categoryList = [];
       firebase.database().ref('categrias').on('value', function (response) {
         console.log("patomalo ---s",response.val());
         var category = response.val();
@@ -47,7 +52,7 @@
         $ionicPopup.alert({
           title: 'Anuncio creado'
         }).then(function () {
-          //$state.go("app.login");
+          $state.go("app.indexAdds");
         });
       });
     }

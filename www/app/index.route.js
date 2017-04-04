@@ -80,6 +80,16 @@
               controllerAs: 'vm'
             }
           }
+        })
+        .state('app.detailAdd', {
+          url:'/detail',
+          views: {
+            'menuContent': {
+              templateUrl: 'app/components/detailAdd/detailAddView.html',
+              controller: 'DetailAddController',
+              controllerAs: 'vm'
+            }
+          }
         });
       $urlRouterProvider.otherwise('/app/start')
 
