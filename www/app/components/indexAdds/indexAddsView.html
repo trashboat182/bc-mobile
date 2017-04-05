@@ -20,7 +20,7 @@
       </ion-item>
       <ion-item ng-if="category.status">
         <div class="row" ng-repeat="optionRow in category.options">
-          <div class="button col col-50 category-options" ng-repeat="optionCol in optionRow" ng-click="vm.view.buttons.goToAddsDetail()">
+          <div class="button col col-50 category-options" ng-repeat="optionCol in optionRow" ng-click="vm.view.buttons.goToAddsDetail(optionCol.code)">
             <i class="icon icon-options" ng-class="optionCol.icon"></i><br>
             {{optionCol.name}}
           </div>

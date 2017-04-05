@@ -22,6 +22,8 @@
         name:'Inmuebles',
         icon: 'icon ion-ios-home',
         status: false,
+        code: 'inmuebles',
+        class: 'category-red',
         options: [
           [{name: 'Casa Venta', icon: 'ion-ios-home'}, {name: 'Casa Alquiler', icon: 'ion-ios-home'}],
           [{name: 'Casa Anticretico', icon: 'ion-ios-home'}, {name: 'Depto. Venta', icon: 'ion-ios-home-outline'}],
@@ -31,6 +33,8 @@
         name:'Automoviles',
         icon: 'icon ion-model-s',
         status: false,
+        code: 'automiviles',
+        class: 'category-yellow',
         options: [
           [{name: 'Camiones', icon: 'ion-model-s'}, {name: 'Vagonetas', icon: 'ion-android-car'}],
           [{name: 'Usados', icon: 'ion-ios-cart'}, {name: 'Nuevos', icon: 'ion-ios-cart-outline'}]
@@ -39,6 +43,8 @@
         name:'Bolsa de Trabajo',
         icon: 'icon ion-ios-people',
         status: false,
+        oode: 'bolsaDeTrabajo',
+        class: 'category-green',
         options: [
           [{name: 'Tiempo Completo', icon: 'ion-ios-star'}, {name: 'Medio Tiempo', icon: 'ion-ios-star-half'}],
           [{name: 'Docentes', icon: 'ion-ios-people'}, {name: 'Buen sueldo', icon: 'ion-social-usd'}]
@@ -47,6 +53,8 @@
         name:'Variedades',
         icon: 'icon ion-bag',
         status: false,
+        code: 'variedades',
+        class: 'category-blue',
         options: [
           [{name: 'Ofrece servicios', icon: 'ion-ios-chatboxes'}, {name: 'Cursos', icon: 'ion-ios-bookmarks'}],
           [{name: 'Bienes', icon: 'ion-social-usd'}, {name: 'Intimidades', icon: 'ion-ios-heart'}]
