@@ -13,14 +13,14 @@
       Crear mi anuncio
     </button>
     <ion-list  ng-repeat="category in vm.view.categories">
-      <ion-item ng-click="vm.view.buttons.openCategory($index)">
+      <ion-item ng-click="vm.view.buttons.openCategory($index)" ng-class="category.class">
         <i ng-class="category.icon"></i>
         <span class="category-name">{{category.name}}</span>
         <i class="arrow-icon icon" ng-class="{'ion-ios-arrow-right': !category.status, 'ion-ios-arrow-down': category.status}"></i>
       </ion-item>
       <ion-item ng-if="category.status">
         <div class="row" ng-repeat="optionRow in category.options">
-          <div class="button col col-50 category-options" ng-repeat="optionCol in optionRow" ng-click="vm.view.buttons.goToAddsDetail(optionCol.code)">
+          <div class="button col col-50 category-options" ng-repeat="optionCol in optionRow" ng-click="vm.view.buttons.goToAddsDetail(category.code, optionCol.id)">
             <i class="icon icon-options" ng-class="optionCol.icon"></i><br>
             {{optionCol.name}}
           </div>

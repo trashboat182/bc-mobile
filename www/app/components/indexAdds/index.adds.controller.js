@@ -25,9 +25,9 @@
         code: 'inmuebles',
         class: 'category-red',
         options: [
-          [{name: 'Casa Venta', icon: 'ion-ios-home'}, {name: 'Casa Alquiler', icon: 'ion-ios-home'}],
-          [{name: 'Casa Anticretico', icon: 'ion-ios-home'}, {name: 'Depto. Venta', icon: 'ion-ios-home-outline'}],
-          [{name: 'Depto. Alquiler', icon: 'ion-ios-home-outline'}, {name: 'Depto. Anticretico', icon: 'ion-ios-home-outline'}]
+          [{id: 0, name: 'Casa Venta', icon: 'ion-ios-home'}, {id: 1, name: 'Casa Alquiler', icon: 'ion-ios-home'}],
+          [{id: 2, name: 'Casa Anticretico', icon: 'ion-ios-home'}, {id: 3, name: 'Depto. Venta', icon: 'ion-ios-home-outline'}],
+          [{id: 4, name: 'Depto. Alquiler', icon: 'ion-ios-home-outline'}, {id: 5, name: 'Depto. Anticretico', icon: 'ion-ios-home-outline'}]
         ]
       }, {
         name:'Automoviles',
@@ -36,8 +36,8 @@
         code: 'automiviles',
         class: 'category-yellow',
         options: [
-          [{name: 'Camiones', icon: 'ion-model-s'}, {name: 'Vagonetas', icon: 'ion-android-car'}],
-          [{name: 'Usados', icon: 'ion-ios-cart'}, {name: 'Nuevos', icon: 'ion-ios-cart-outline'}]
+          [{id: 0, name: 'Usados', icon: 'ion-ios-cart'}, {id: 1, name: 'Nuevos', icon: 'ion-ios-cart-outline'}],
+          [{id: 2, name: 'Repuestos', icon: 'ion-model-s'}, {id: 3, name: 'Maquinas pesadas', icon: 'ion-android-car'}]
         ]
       }, {
         name:'Bolsa de Trabajo',
@@ -46,8 +46,8 @@
         oode: 'bolsaDeTrabajo',
         class: 'category-green',
         options: [
-          [{name: 'Tiempo Completo', icon: 'ion-ios-star'}, {name: 'Medio Tiempo', icon: 'ion-ios-star-half'}],
-          [{name: 'Docentes', icon: 'ion-ios-people'}, {name: 'Buen sueldo', icon: 'ion-social-usd'}]
+          [{id: 0, name: 'Tiempo Completo', icon: 'ion-ios-star'}, {id: 1, name: 'Medio Tiempo', icon: 'ion-ios-star-half'}],
+          [{id: 2, name: 'Contrato', icon: 'ion-ios-people'}, {id: 3, name: 'Servicios profesionales', icon: 'ion-social-usd'}]
         ]
       }, {
         name:'Variedades',
@@ -56,8 +56,8 @@
         code: 'variedades',
         class: 'category-blue',
         options: [
-          [{name: 'Ofrece servicios', icon: 'ion-ios-chatboxes'}, {name: 'Cursos', icon: 'ion-ios-bookmarks'}],
-          [{name: 'Bienes', icon: 'ion-social-usd'}, {name: 'Intimidades', icon: 'ion-ios-heart'}]
+          [{id: 0, name: 'Ofrece servicios', icon: 'ion-ios-chatboxes'}, {id: 1, name: 'Cursos', icon: 'ion-ios-bookmarks'}],
+          [{id: 2, name: 'Bienes', icon: 'ion-social-usd'}, {id: 3, name: 'Intimidades', icon: 'ion-ios-heart'}]
         ]
       }],
       variable: {}
@@ -87,8 +87,8 @@
       $state.go("app.createAdd");
     }
 
-    function goToAddsDetail() {
-      $state.go("app.detailAdd");
+    function goToAddsDetail(category, subCategory) {
+      $state.go("app.detailAdd", {category: category, subId: subCategory});
     }
 
     /**

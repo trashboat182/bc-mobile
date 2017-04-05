@@ -35,3 +35,15 @@
 .icon-options {
   color: #1d730a;
 }
+.category-red {
+  background-color: #EA4335
+}
+.category-yellow {
+  background-color: #FBBC05
+}
+.category-green {
+  background-color: #34AB53
+}
+.category-blue {
+  background-color: #4285F4
+}

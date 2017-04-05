@@ -82,7 +82,7 @@
           }
         })
         .state('app.detailAdd', {
-          url:'/detail',
+          url:'/detail/:category/:subId',
           views: {
             'menuContent': {
               templateUrl: 'app/components/detailAdd/detailAddView.html',
