@@ -29,7 +29,7 @@
   margin-left: 10%;
 }
 .category-options {
-  margin: 3px 10px;
+  margin: 1px;
 }
 .icon-options {
   color: #000000;
@@ -45,4 +45,43 @@
 }
 .category-blue {
   background-color: #4285F4
+}
+.footer-bar {
+  display: table;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.button-footer-left {
+  margin-right: 15px;
+}
+.button-footer-middle {
+  margin: 0px 15px;
+}
+.button-footer-right {
+  margin-left: 15px;
+}
+.image-detail {
+  display: block;
+  text-align: center;
+}
+.image-detail img {
+  width: 50%;
+}
+.table-detail {
+  width: 100%;
+}
+.table-first-detail {
+  padding-left: 15px;
+}
+.table-second-detail {
+  justify-content: flex-end;
+  text-align: end;
+  margin-right: 15px;
+  padding-right: 15px;
+}
+.text-detail {
+  font-weight: bold;
+  font-size: 18px;
 }

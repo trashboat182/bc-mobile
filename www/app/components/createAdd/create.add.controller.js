@@ -8,7 +8,7 @@
     .module('bcMobile')
     .controller('CreateAddController', CreateAddController);
 
-  function CreateAddController($ionicSideMenuDelegate, $state, $ionicPopup) {
+  function CreateAddController($ionicSideMenuDelegate, $state, $ionicPopup, $scope) {
     var vm = this;
     vm.buttons = {
       menuButton: menuButton,
@@ -37,6 +37,7 @@
           vm.categoryList.push(list);
         }
         console.log("patomalo ---t", vm.categoryList);
+        $scope.$apply();
       });
     }
 
@@ -47,6 +48,15 @@
     function createAnuncio() {
       console.log("to send", vm.view);
       var viewKey = firebase.database().ref().child('adds').push().key;
+      if(vm.view.category.category === 'inmuebles') {
+        vm.view.image = 'pictures/casa1.jpg';
+      }
+      if(vm.view.category.category === 'automoviles') {
+        vm.view.image = 'pictures/autorojo.jpg';
+      }
+      if(vm.view.category.category === 'bolsaDeTrabajo') {
+        vm.view.image = 'pictures/casa3.jpg';
+      }
       firebase.database().ref('adds/' + viewKey).set(vm.view).then(function (response) {
         console.log("done", response);
         $ionicPopup.alert({

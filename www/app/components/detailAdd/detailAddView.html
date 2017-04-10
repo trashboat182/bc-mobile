@@ -9,6 +9,69 @@
   </ion-nav-title>
   <ion-nav-bar></ion-nav-bar>
   <ion-content>
-    <h1>Detail</h1>
+    <div ng-if="vm.view.list.length > 0">
+      <button class="button button-block button-positive" ng-click="">
+        Realidad Aumentada
+      </button>
+      <div class="image-detail">
+        <img ng-src="{{vm.view.image}}">
+        <h3>{{vm.view.mainView.title}}</h3>
+      </div>
+      <table class="table-detail">
+        <tr>
+          <td class="table-first-detail">
+            <span style="color: #4285F4" class="text-detail">Precio:</span>
+          </td>
+          <td class="table-second-detail">
+            <label class="text-detail">{{vm.view.mainView.price}} Bs.</label>
+          </td>
+        </tr>
+        <tr>
+          <td class="table-first-detail" colspan="2" style="border: 1px solid #4285F4">
+            <span style="color: #4285F4" class="text-detail">Detalle:</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="table-first-detail" colspan="2">
+            <label class="text-detail">{{vm.view.mainView.detail}}</label>
+          </td>
+        </tr>
+        <tr>
+          <td class="table-first-detail" colspan="2" style="border: 1px solid #4285F4">
+            <span style="color: #4285F4" class="text-detail">Descripcion:</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="table-first-detail" colspan="2">
+            <label class="text-detail">{{vm.view.mainView.description}}</label>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div ng-if="vm.view.list.length <= 0">
+      <div class="image-detail">
+        <h3>No hay Anuncios en esta categoria</h3>
+      </div>
+    </div>
   </ion-content>
+  <ion-footer-bar>
+    <div class="footer-bar">
+      <button class="button button-icon icon ion-android-arrow-back button-footer-left"
+              ng-disabled="vm.view.list.length <= 0"
+              ng-click="vm.buttons.backDetail()"
+              style="color: #34AB53"></button>
+      <button class="button button-icon icon ion-arrow-return-left button-footer-middle"
+              ng-disabled="vm.view.list.length <= 0"
+              ng-click="vm.buttons.goBack()"
+              style="color: #FBBC05"></button>
+      <button class="button button-icon icon ion-heart button-footer-middle"
+              ng-disabled="vm.view.list.length <= 0"
+              ng-click=""
+              style="color: #EA4335"></button>
+      <button class="button button-icon icon ion-android-arrow-forward button-footer-right"
+              ng-disabled="vm.view.list.length <= 0"
+              ng-click="vm.buttons.nextDetail()"
+              style="color: #34AB53"></button>
+    </div>
+  </ion-footer-bar>
 </ion-view>

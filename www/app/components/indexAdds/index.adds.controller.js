@@ -33,7 +33,7 @@
         name:'Automoviles',
         icon: 'icon ion-model-s',
         status: false,
-        code: 'automiviles',
+        code: 'automoviles',
         class: 'category-yellow',
         options: [
           [{id: 0, name: 'Usados', icon: 'ion-ios-cart'}, {id: 1, name: 'Nuevos', icon: 'ion-ios-cart-outline'}],
